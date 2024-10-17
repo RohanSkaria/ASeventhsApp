@@ -1,15 +1,17 @@
+## not usable if downloaded
 ## need to translate to dart
 ## need to bypass captcha - but its super simple captchas 
 import requests
 import bs4 import BeautifulSoup
+import creds
 
 loginurl = ("https://api.dupr.gg/auth/v1.0/login")
 secure_url = ("https://api.dupr.gg/player/v1.0/search")
 
 #create a dic
 payload = {
-  'username': "REDACTED"
-  'password': "REDACTED"
+  'username': creds.username
+  'password': creds.password
 }
 
 searchLoad = {
@@ -38,6 +40,4 @@ r = requests.post(loginurl, data = payload)
 #auth link to send POST request
 https://api.dupr.gg/auth/v1.0/login
 
-email: "##Redacted##"
-password:  "##Redacted##"
 
